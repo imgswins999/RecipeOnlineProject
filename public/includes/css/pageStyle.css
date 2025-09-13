@@ -1,0 +1,468 @@
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+    body {
+        background-color: #FF7F5E;
+        font-family: "Noto Sans Thai", sans-serif;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        align-items: center;
+        font-size: 20px;
+        border-bottom: solid 2px white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #FF7F5E;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    nav ul li {
+
+        list-style: none;
+
+
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .slider {
+        display: flex;
+        overflow: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 20px;
+        background: #f7b740;
+        scrollbar-width: none;
+        margin-top: 150px;
+        border-bottom: solid 2px white;
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    .slider img {
+        height: 250px;
+        border-radius: 10px;
+        flex: 0 0 auto;
+        box-shadow: 0px 5px #c74d0111;
+    }
+
+
+
+    .foodType {
+
+        display: grid;
+        grid-template-columns: repeat(5, 200px);
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px 100px;
+        margin-top: 0;
+
+
+
+    }
+
+    .foodType img {
+        width: 250px;
+        height: 250px;
+        padding: 10px;
+        object-fit: cover;
+        border-radius: 20px;
+        background-color: #00000079;
+        box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+        /* เงาจาง ๆ */
+        box-sizing: border-box;
+        margin-left: 5px;
+        margin-top: 5px;
+
+
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        background-color: #490b18;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .card:hover {
+        background-color: #a5300d;
+
+        .card-author {
+            color: aliceblue;
+        }
+    }
+
+    .card-title {
+        margin-top: 10px;
+        color: white;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .card-author {
+        color: rgb(204, 85, 85);
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+
+    .tab-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 100px;
+        color: white;
+        margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+        }
+
+        .tab-all-main {
+            color: rgb(255, 255, 255);
+        }
+
+        .tab-all-main:hover {
+            color: #490b18;
+        }
+    }
+
+    .catagoryFood {
+        margin-top: 100px;
+        background-color: #6e4b090e;
+        box-sizing: border-box;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-bottom: 20px;
+        border-radius: 25px;
+    }
+
+
+
+    /* Add Recipe Page */
+    .container-addRecipe {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #202020;
+        padding: 50px;
+        box-sizing: border-box;
+        width: max-content;
+        margin: 200px auto auto auto;
+        border-radius: 5px;
+    }
+
+    .st-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .addImage {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+
+
+
+        .text-add {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .upload-box {
+            width: 250px;
+            height: 250px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            /* กันรูปเกินกรอบ */
+            position: relative;
+        }
+
+        .upload-label {
+
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .upload-content {
+            font-family: sans-serif;
+            color: #ffffff;
+        }
+
+        .upload-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .upload-box:hover {
+            border-color: #666;
+        }
+
+        #previewImage {
+            display: none;
+            /* ซ่อนตอนแรก */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* ให้รูปเต็มกรอบโดยไม่เบี้ยว */
+            border-radius: 8px;
+        }
+
+
+    }
+
+
+
+    .addInfomation {
+        .title-box {
+            background-color: #e6a959f1;
+            width: max-content;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            justify-content: baseline;
+            display: flex;
+
+
+            .add-title {
+                color: white;
+                font-size: 20px;
+            }
+
+            input {
+                width: 200px;
+                height: 30px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                background-color: #ffffff;
+                border-color: white;
+                font-family: "Noto Sans Thai", sans-serif;
+                border-style: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            input:hover,
+            input:focus {
+                background-color: #693535;
+                color: white;
+            }
+
+        }
+
+        .description-box {
+            background-color: #e6a959f1;
+            width: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            justify-content: baseline;
+            display: flex;
+            margin-top: 20px;
+
+            label {
+                color: white;
+                font-size: 20px;
+            }
+
+            textarea {
+                width: 350px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                background-color: #ffffff;
+                border-color: white;
+                font-family: "Noto Sans Thai", sans-serif;
+                word-wrap: break-word;
+                resize: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            textarea:hover,
+            textarea:focus {
+                background-color: #693535;
+                color: white;
+            }
+        }
+
+    }
+
+    .choice-area {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background-color: #e6a959f1;
+        width: max-content;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        justify-content: baseline;
+        display: flex;
+        margin-top: 20px;
+
+        .type-box,
+        .difficulty-box {
+            label {
+                color: white;
+                font-size: 20px;
+            }
+
+            select {
+                width: 200px;
+                height: 30px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                background-color: #ffffff;
+                border-color: white;
+                font-family: "Noto Sans Thai", sans-serif;
+                border-style: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            select:hover,
+            select:focus {
+                background-color: #693535;
+                color: white;
+            }
+
+
+
+        }
+
+        .time-box {
+            label {
+                color: white;
+                font-size: 20px;
+            }
+
+            input {
+                width: 200px;
+                height: 30px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                background-color: #ffffff;
+                border-color: white;
+                font-family: "Noto Sans Thai", sans-serif;
+                border-style: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            input:hover,
+            input:focus {
+                background-color: #693535;
+                color: white;
+            }
+        }
+
+
+    }
+
+    .mid-info {
+        .ingredients-box {
+            h2 {
+                color: white;
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+        }
+
+        textarea {
+            margin-top: 5px;
+            resize: none;
+            width: 1000px;
+            font-size: 20px;
+            border-style: none;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .instructions-box {
+            h2 {
+                color: white;
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+        }
+
+    }
+
+    .save-button {
+        margin-top: 20px;
+        .btSaveRecipe {
+            width: 120px;
+            height: 50px;
+            font-size: 20px;
+            font-family: "Noto Sans Thai", sans-serif;
+            background-color: rgb(104, 150, 104);
+            color: white;
+            border-radius: 10px;
+            border: solid 1px white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btSaveRecipe:hover {
+            background-color: rgb(55, 78, 55);
+        }
+
+        .btCancleRecipe {
+            width: 120px;
+            height: 50px;
+            font-size: 20px;
+            font-family: "Noto Sans Thai", sans-serif;
+            background-color: rgb(221, 63, 63);
+            color: white;
+            border-radius: 10px;
+            border: solid 1px white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btCancleRecipe:hover {
+            background-color: rgb(158, 44, 44);
+
+        }
+
+
+    }

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+body {
+    background-color: #F39459;
+    font-family: "Noto Sans Thai", sans-serif;
+
+}
+
+.image-login {
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow:
+        -4px -4px 8px rgba(64, 18, 18, 0.8),
+        /* แสง */
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    /* เงา */
+}
+
+
+
+.container-login {
+    width: 1530px;
+    height: 820px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC65B;
+    border-radius: 76px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    box-shadow: 25px 15px #8f471a4f;
+    color: white;
+}
+
+.container-login img {
+    object-fit: cover;
+    border-radius: 76px;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+
+}
+
+.button-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+
+
+}
+
+.button-login a {
+    transition: 0.3s all ease-in-out;
+}
+
+.button-login a:hover {
+    color: #8d6102;
+}
+
+
+.login-form form input[Type="text"],
+[Type="password"] {
+    background-color: #6C3636;
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
+    border-style: none;
+    transition: 0.3s all ease-in-out;
+    color: white;
+    border-radius: 30px;
+
+}
+
+.login-form form input[Type="text"]:focus,
+[Type="password"]:focus {
+    background-color: #e4672e;
+    border: 1px solid #e4672e;
+
+}
+
+.container-login form input[Type="submit"] {
+    background-color: #193c72;
+    font-family: "Noto Sans Thai", sans-serif;
+    color: white;
+    width: 250px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 30px;
+    border-style: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container-login form input[Type="submit"]:hover {
+    background-color: #122441;
+    cursor: pointer;
+}
+
+.button-login a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* REGISTER*/
+
+.container-register {
+    background-color: #FFC65B;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 1530px;
+    height: 815px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 76px;
+    box-shadow: 25px 15px #8f471a4f;
+    color: white;
+}
+
+.form-register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-register form label {
+    font-size: 25px;
+}
+
+.register-input {
+    width: 500px !important;
+    height: 50px !important;
+    font-size: 25px !important;
+    border-style: none !important;
+    transition: 0.3s all ease-in-out !important;
+    color: white !important;
+    border-radius: 30px !important;
+    background-color: #6C3636 !important;
+    margin-bottom: 20px;
+}
+
+.register-input:focus {
+    background-color: #f8945a !important;
+
+}
+
+.image-register {
+    object-fit: cover;
+    border-radius: 70px;
+    padding: 10px;
+    box-shadow:
+        -4px -4px 8px rgba(64, 18, 18, 0.8),
+        /* แสง */
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    /* เงา */
+}
+
+.buttom-rgister {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.buttom-rgister a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.buttom-rgister a:hover {
+    color: #8d6102;
+}
+
+.buttom-rgister input[Type="submit"] {
+    background-color: #193c72;
+    font-family: "Noto Sans Thai", sans-serif;
+    color: white;
+    width: 250px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 30px;
+    border-style: none;
+    transition: 0.3s ease-in-out;
+}
+
+.buttom-rgister input[Type="submit"]:hover {
+    background-color: #122441;
+    cursor: pointer;
+}
+
+.register-input {
+    padding-left: 20px;
+}
+
+.login-input {
+    padding-left: 20px;
+}
+
