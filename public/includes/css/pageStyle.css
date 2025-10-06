@@ -49,7 +49,7 @@
         padding: 20px;
         background: #f7b740;
         scrollbar-width: none;
-        margin-top: 150px;
+        margin-top: 100px;
         border-bottom: solid 2px white;
     }
 
@@ -172,7 +172,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #202020;
+        background-color: #27272793;
         padding: 50px;
         box-sizing: border-box;
         width: max-content;
@@ -431,6 +431,7 @@
 
     .save-button {
         margin-top: 20px;
+
         .btSaveRecipe {
             width: 120px;
             height: 50px;
@@ -465,4 +466,33 @@
         }
 
 
+    }
+
+    /* Recipe Show */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container-showRecipe {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .infomation-box {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+
+        justify-content: center;
+        background-color: #722916;
+        height: 400px;
+    }
+
+    .show-imageFood {
+        margin-right: 300px;
     }

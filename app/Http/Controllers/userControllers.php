@@ -77,7 +77,7 @@ class userControllers extends Controller
           $recipe = DB::table('recipe')
                ->join('user', 'recipe.userID', '=', 'user.userID')
                ->join('catagory', 'recipe.catagoryID', '=', 'catagory.catagoryID')
-               ->select('recipe.*', 'user.username as username')
+               ->select('recipe.*', 'user.username as username','user.userImage as userImage')
                ->where('recipe.recipeID', $recipeID)
                ->first();
           return view('user.page.recipeShow', compact('recipe'));

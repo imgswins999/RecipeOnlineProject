@@ -80,9 +80,9 @@
 
             <!-- แถบสมัครสมาชิกและเข้าสู่ระบบ -->
             <ul class="login-link">
-                <li><a href="formLogin">เข้าสู่ระบบ</a></li>
+                <li><a href="{{ route('formLogin') }}">เข้าสู่ระบบ</a></li>
                 <p>/</p>
-                <li><a href="formRegister">สมัครสมาชิก</a></li>
+                <li><a href="{{ route('formRegister') }}">สมัครสมาชิก</a></li>
             </ul>
 
         </nav>

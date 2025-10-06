@@ -4,6 +4,7 @@ use App\Http\Controllers\userControllers;
 use Illuminate\Support\Facades\Route;
 //LGOIN
 Route::get('/formLogin', [userControllers::class, 'formLogin'])->name('formLogin');
+
 Route::post('/login', [userControllers::class, 'login'])->name('login');
 
 // REGIGTER
