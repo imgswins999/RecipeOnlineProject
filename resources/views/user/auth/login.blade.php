@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="{{ asset('includes/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<form action="{{ route('login') }}" method="POST"></form>
 
 <body data-aos="zoom-in-up">
+
     <div class="container">
         <div class="container-login" data-aos="flip-right">
-            <img src="{{ asset('includes/image/food-login.jpg') }}" alt="login-image" width="740px" height="740px" class="image-login">
+            <img src="{{ asset('includes/image/food-login.jpg') }}" alt="login-image" width="740px" height="740px"
+                class="image-login">
             <div class="login-form">
-                <img src="{{ asset('includes/image/logo.png') }}" alt="logo" width="400px" >
+                <img src="{{ asset('includes/image/logo.png') }}" alt="logo" width="400px">
                 <h1>เข้าสู่ระบบ</h1>
-                <form action="{{ route('login') }}"  method="POST">
+                <form action="{{ route('login') }}" method="POST">
                     @csrf
                     @if (session('login'))
                         <p style="color:red">{{session('login')}}</p>
@@ -30,13 +33,13 @@
                         <a href="{{ route('formRegister') }}">สมัครสมาชิก</a>
                         <input type="submit" value="เข้าสู่ระบบ">
                     </div>
-                    
+
                 </form>
             </div>
         </div>
 
     </div>
-
+    </form>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

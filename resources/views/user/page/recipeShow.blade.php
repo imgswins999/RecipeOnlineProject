@@ -7,15 +7,13 @@
                 <img src="{{ $recipe->imageURL}}" alt="รูปเมนูอาหาร" width="556px" height="400px">
             </div>
             <div class="infomation-groupbox">
-                <h4>ประเภทอาหาร</h4>
-                <h1>ชื่ออาหาร</h1>
+                <h1>{{$recipe->title}}</h1>
                 <div class="author-box">
                     <img src="{{$recipe->userImage}}" alt="">
                     <h3>{{$recipe->username}}</h3>
                 </div>
                 <div class="description-box">
-                    <!-- อย่าลืมแก้ เขียนไใว้ก่อน-->
-                    <p>คำอธิบาย</p>
+                    <p>{{$recipe->description}}</p>
                 </div>
                 <div class="likeAndTimer">
                     <div class="like">
@@ -26,8 +24,8 @@
                         <!-- <img src="{{ asset('../includes/image/liked.png') }}" alt="liked"> -->
                     </div>
                     <div class="timer">
-                        <h4>ความยาก</h4>
-                        <h4>ระยะเวลา</h4>
+                        <h4>ความยาก : {{$recipe->difficulty}}</h4>
+                        <h4>ระยะเวลา : {{$recipe->timer}}</h4>
                     </div>
                 </div>
             </div>

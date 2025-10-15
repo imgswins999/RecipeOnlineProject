@@ -3,9 +3,13 @@
 use App\Http\Controllers\userControllers;
 use Illuminate\Support\Facades\Route;
 //LGOIN
+
 Route::get('/formLogin', [userControllers::class, 'formLogin'])->name('formLogin');
 
 Route::post('/login', [userControllers::class, 'login'])->name('login');
+
+// LOGOUT
+Route::post('/logout', [userControllers::class, 'logout'])->name('logout');
 
 // REGIGTER
 Route::get('/formRegister', [userControllers::class, 'formRegister'])->name('formRegister');
