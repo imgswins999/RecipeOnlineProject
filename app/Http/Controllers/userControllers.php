@@ -34,6 +34,11 @@ class userControllers extends Controller
           if ($user) {
                $userStatus = true;
                Session::put('user', $user);
+               session([
+                    'userID' => $user->userID,
+                    'username' => $user->username,
+                    'userStatus' => true,
+               ]);
                return view('user.page.home', compact('foods', 'userStatus'));
           } else {
                $userStatus = false;
@@ -58,10 +63,15 @@ class userControllers extends Controller
                ->join('catagory', 'recipe.catagoryID', '=', 'catagory.catagoryID')
                ->select('recipe.*', 'user.username as username')
                ->get();
-          $userStatus = false;
-          return view('user.page.home', compact('userStatus', 'foods'));
+
+          // ✅ ดึงค่าจาก session ถ้ามี
+          $userStatus = session('userStatus', false); // ถ้าไม่มีค่า ให้ false เป็นค่าเริ่มต้น
+          $username = session('username'); // ดึงชื่อผู้ใช้มาใช้ด้วยถ้าต้องการ
+
+          return view('user.page.home', compact('userStatus', 'foods', 'username'));
      }
 
+     // เพิ่มสูตรอาหาร
      public function createRecipe()
      {
           $userStatus = true;
@@ -72,14 +82,26 @@ class userControllers extends Controller
           return view('user.page.createRecipes', compact('userStatus', 'catagory'));
      }
 
+     // หน้าโชว์ข้อมูลสูตรอาหาร
      public function showRecipe($recipeID)
      {
           $recipe = DB::table('recipe')
                ->join('user', 'recipe.userID', '=', 'user.userID')
                ->join('catagory', 'recipe.catagoryID', '=', 'catagory.catagoryID')
-               ->select('recipe.*', 'user.username as username','user.userImage as userImage')
+               ->select('recipe.*', 'user.username as username', 'user.userImage as userImage')
                ->where('recipe.recipeID', $recipeID)
                ->first();
-          return view('user.page.recipeShow', compact('recipe'));
+          // ✅ ดึงค่าจาก session ถ้ามี
+          $userStatus = session('userStatus', false); // ถ้าไม่มีค่า ให้ false เป็นค่าเริ่มต้น
+          $username = session('username'); // ดึงชื่อผู้ใช้มาใช้ด้วยถ้าต้องการ
+          return view('user.page.recipeShow', compact('recipe', 'userStatus', 'username'));
+     }
+
+     // ออกจากระบบ
+     public function logout()
+     {
+          Session::forget('userID'); // ลบ session ที่เก็บ user
+          Session::flush(); // เคลียร์ทุก session
+          return redirect()->route('home');
      }
 }

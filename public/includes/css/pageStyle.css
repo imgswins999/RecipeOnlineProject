@@ -487,12 +487,60 @@
         display: flex;
         flex-direction: row;
         margin-top: 100px;
-
-        justify-content: center;
+        color: white;
+        justify-content: left;
         background-color: #722916;
-        height: 400px;
+        height: 402px;
+        border-bottom:white solid 2px ;
     }
 
     .show-imageFood {
-        margin-right: 300px;
+        margin-right: 50px;
+        margin-left: 400px;
+
     }
+
+    .author-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            
+        }
+    }
+
+    .infomation-groupbox {
+        margin-top: 20px;
+    }
+
+    .description-box {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 50px 50px 50px;
+        box-sizing: border-box;
+
+        p {
+            font-size: 18px;
+            text-wrap: warp;
+            color: #f7b740;
+        }
+    }
+
+    .likeAndTimer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    .timer {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+

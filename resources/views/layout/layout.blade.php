@@ -52,6 +52,16 @@
                 <a href="">
                     <img src="{{ asset('includes/image/user.png') }}" alt="NotificationIMAGE" width="40px">
                 </a>
+                <!-- ออกจากระบบ -->
+                <form action="{{route('logout')  }}" method="post">
+                     @csrf
+                    <button type="submit">
+                        <img src="{{ asset('includes/image/logout.png') }}" alt="NotificationIMAGE" width="40px">
+                    </button>
+                </form>
+
+
+
 
             </ul>
 
